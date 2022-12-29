@@ -1,2 +1,0 @@
-# cygnus_the_stargazer_solution
-mtrecu
