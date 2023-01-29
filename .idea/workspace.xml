@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61d7af94-6ef4-4bbc-b8bc-0d063b2c9083" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/15.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/15.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/30.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/30.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/31.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/31.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/32.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/32.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/33.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/33.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/34.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/34.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/52.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/52.html" afterDir="false" />
-    </list>
+    <list default="true" id="61d7af94-6ef4-4bbc-b8bc-0d063b2c9083" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,18 +21,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="JavaScript Debug.index.html (1)">
     <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/cygnus_the_stargazer_solution/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
@@ -67,6 +57,7 @@
       <updated>1674429564279</updated>
       <workItem from="1674429565620" duration="6000" />
       <workItem from="1674839778168" duration="2891000" />
+      <workItem from="1674925132781" duration="17000" />
     </task>
     <servers />
   </component>
