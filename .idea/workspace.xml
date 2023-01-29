@@ -4,7 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61d7af94-6ef4-4bbc-b8bc-0d063b2c9083" name="Changes" comment="" />
+    <list default="true" id="61d7af94-6ef4-4bbc-b8bc-0d063b2c9083" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/Spring.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/Spring.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/Summer.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/Summer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/autum.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/autum.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/103.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/103.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/110.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/110.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/15.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/15.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/30.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/30.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/31.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/31.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/32.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/32.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/33.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/33.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/34.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/34.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/52.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/52.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/72.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/72.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/73.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/73.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/74.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/74.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/76.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/76.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/77.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/77.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/winter.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/winter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,6 +79,7 @@
       <workItem from="1674429565620" duration="6000" />
       <workItem from="1674839778168" duration="2891000" />
       <workItem from="1674925132781" duration="17000" />
+      <workItem from="1675022944429" duration="331000" />
     </task>
     <servers />
   </component>
