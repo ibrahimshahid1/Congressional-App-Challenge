@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61d7af94-6ef4-4bbc-b8bc-0d063b2c9083" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/77.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/77.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +64,7 @@
       <workItem from="1674839778168" duration="2891000" />
       <workItem from="1674925132781" duration="17000" />
       <workItem from="1675022944429" duration="741000" />
+      <workItem from="1675117728778" duration="81000" />
     </task>
     <servers />
   </component>
