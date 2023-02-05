@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61d7af94-6ef4-4bbc-b8bc-0d063b2c9083" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/Spring.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/Spring.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/Summer.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/Summer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/autum.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/autum.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/winter.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/winter.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/me.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/about.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,12 +30,16 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2Khb3hoZVjJhD9HVvhNe6DbxdOV" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -81,7 +80,7 @@
       <workItem from="1675117728778" duration="81000" />
       <workItem from="1675300847334" duration="55000" />
       <workItem from="1675554071154" duration="14000" />
-      <workItem from="1675620432527" duration="645000" />
+      <workItem from="1675620432527" duration="973000" />
     </task>
     <servers />
   </component>
@@ -98,5 +97,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>
