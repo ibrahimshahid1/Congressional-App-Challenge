@@ -4,7 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="61d7af94-6ef4-4bbc-b8bc-0d063b2c9083" name="Changes" comment="" />
+    <list default="true" id="61d7af94-6ef4-4bbc-b8bc-0d063b2c9083" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-001.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-002.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-003.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-004.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-005.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-006.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-007.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-008.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-009.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-010.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-011.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-012.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-013.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-014.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-015.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-016.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-017.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-018.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-019.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-020.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-021.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-022.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-023.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-024.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-025.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-026.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-027.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-028.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-029.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-030.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-031.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-032.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-033.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-034.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-035.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-036.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/Summer Skymaps/Skymaps/stellarium-037.png" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -85,6 +123,7 @@
       <workItem from="1675986717376" duration="57000" />
       <workItem from="1675986814153" duration="2430000" />
       <workItem from="1676162392284" duration="31000" />
+      <workItem from="1676162732776" duration="625000" />
     </task>
     <servers />
   </component>
