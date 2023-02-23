@@ -1,166 +1,287 @@
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cygnus - The Stargazer Solution</title>
-    <script src="//rum-static.pingdom.net/pa-63dff0369034fb00110018c2.js" async></script>
-    <meta content="width=device-width" name="viewport">
-</head>
-<a id="nav-expand" href="#">
-    <span class="icon icon-menu"></span>&nbsp;
-    View Messier Menu
-
-</a>
-<nav>
-    <a id="nav-collapse" href="#">
-        <span class="icon icon-cross"></span>
-    </a>
-
-    <a href="#">Autumnal Sky Map</a>
-    <a href="/Congressional App Challenge/resources/Autum Side NAV/74.html">M74</a>
-    <a href="/Congressional App Challenge/resources/Autum Side NAV/77.html">M77</a>
-    <a href="/Congressional App Challenge/resources/Autum Side NAV/33.html">M33</a>
-    <a href="/Congressional App Challenge/resources/Autum Side NAV/31.html">M31</a>
-    <a href="/Congressional App Challenge/resources/Autum Side NAV/32.html">M32</a>
-    <a href="/Congressional App Challenge/resources/Autum Side NAV/110.html">M110</a>
-    <a href="/Congressional App Challenge/resources/Autum Side NAV/52.html">M52</a>
-    <a href="/Congressional App Challenge/resources/Autum Side NAV/103.html">M103</a>
-    <a href="/Congressional App Challenge/resources/Autum Side NAV/76.html">M76</a>
-    <a href="/Congressional App Challenge/resources/Autum Side NAV/34.html">M34</a>
-    <a href="/Congressional App Challenge/resources/Autum Side NAV/15.html">M15</a>
-    <a href="/Congressional App Challenge/resources/Autum Side NAV/72.html">M72</a>
-    <a href="/Congressional App Challenge/resources/Autum Side NAV/73.html">M73</a>
-    <a href="/Congressional App Challenge/resources/Autum Side NAV/2.html">M2</a>
-    <a href="/Congressional App Challenge/resources/Autum Side NAV/30.html">M30</a>
-
-
-</nav>
-<main>
-
-
-
-    <center><h1> Autumnal Night Sky Messier Targets</h1></center>
-    <div>
-        <div>
-            <center><h5> Pick a Celestial Target out of the Menu to get  Starmaps and Obserivng tips for each respective object</h5></center>
-
-
-        </div>
-    </div>
-
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <style>
         body {
-            font-family: "Roboto", sans-serif;
-            font-size: 18px;
-            overflow-x: hidden;
-            background-color: #fe8c00;
-            overflow: hidden
-
-        }
-
-        main {
-            padding: 40px 25px;
-            transition: .5s ease-in-out;
             width: 100%;
-            color: #eee;
-            line-height:  12cm;
-            overflow: hidden
-
+            margin: 0 auto;
+            background: #ff9966;
+            color: #626262;
         }
 
-        nav {
-            background: #000000;
-            bottom: 0;
-            box-shadow: 0 0 5px #666;
-            height: 100%;
-            left: -17.5rem;
-            padding-top: 38px;
-            position: absolute;
-            top: 0;
-            transition: .5s ease-in-out;
-            width: 13rem;
-            user-select: none;
+        #container {
+            position: relative;
+            width: 968px;
+            margin: 0 auto;
+            transition: ease-in
         }
 
-        nav a {
-            color: #eee;
-            display: block;
-            padding: 12px 16px;
-            transition: .5s;
-            text-decoration: none;
-            -webkit-user-drag: none;
+        #container ul {
+            list-style: none;
         }
 
-        nav a:hover {
-            background-color: #000000;
+        #container .buttons {
+            margin: 10px 0px 0 380px;
         }
 
-        #nav-collapse {
-            padding: 8px 12px;
-            position: absolute;
-            right: 0;
-            top: 0;
+        #container .grid li:hover {
+            box-shadow: 4px 4px 9px rgba(0, 0, 0, 0.4);
+            transition: 0.5s ease;
         }
 
-        #nav-expand {
-            background-color: #333;
-            color: #eee;
-            display: block;
-            left: 0;
-            top: 0;
-            padding: 8px 12px;
-            position: absolute;
-            text-decoration: none;
-            transition: .5s linear;
-            user-select: none;
-            -webkit-user-drag: none;
+        #container .grid li {
+            float: left;
+            width: 200px;
+            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+            border-top: 8px solid #f7b733;
+            margin: 20px 25px;
+            padding: 0 20px 20px 20px;
+            text-align: left;
         }
 
-        #nav-expand:focus {
-            opacity: 0;
+        #container .list li {
+            float: left;
+            width: 100%;
+            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+            margin: 2px 15px;
+            padding: 0 20px 15px;
+            text-align: left;
         }
 
-        #nav-expand:focus ~ main {
-            margin-left: 13rem;
-            transition-delay: .25s;
+        #container .list li:hover {
+            box-shadow: 4px 0px 9px rgba(0, 0, 0, 0.4);
+            transition: 0.5s ease;
         }
 
-        #nav-expand:focus ~ nav {
-            left: 0;
-            transition-delay: .25s;
+        #container .list li button {
+            display: none;
         }
 
-        #nav-expand:hover {
-            background-color: #000000;
-            color: #fff;
+        #container li:nth-child(odd) {
+            background: #ffffff;
         }
 
-        .icon {
-            display: inline-block;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 12px;
-            width: 12px;
+        #container li:first-child {
+            border-top: 8px solid #f7b733;
         }
 
-        .icon-cross {
-            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAABHNCSVQICAgIfAhkiAAAAPdJREFUGJV1jz9LhWAYxc+9rVZDQ+DcEI0NLU19gxr6Ci3tuvjnA+gggSBt4qzzO90b5FBubkHgEM1CBL5K93Ia8jWv4G88/A7PeQAArusekXwRQpiGYSzQ4/v+Gcn3OI6vMRJf+cdWFXrxs8+bOI5vkCTJLckf/rMtiuJhJJIk67oWAIA0Te8mhR2klGvbtg/UvNlC27ZPSlwquaqqZwA1dmGe56uu676HxPO8U5IfMyuGp+fEt+nTQghzqWnaMYBDdUVKuXYc5yLLsnsAmz5e6Lp+AgCIouiK5FfTNCvLsvanT5dl+Wia5t6wOwiC87GoCMPwUom/I2EVwEqOzwUAAAAASUVORK5CYII=');
+        #container li:nth-child(even) {
+            background: #ede5e9;
         }
 
-        .icon-menu {
-            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAABHNCSVQICAgIfAhkiAAAAB5JREFUKJFj/P///38GEgATKYoHKWAc9TQRgGRPAwD0IAv+FT8LPwAAAABJRU5ErkJggg==');
+        .float-left {
+            float: left;
+            padding-right: 20px;
         }
 
+        .green-btn {
+            background: #f7b733;
+            border: none;
+            border-radius: 3px;
+            padding: 15px 20px;
+            font-family: 'Helvetica', sans-serif;
+            font-size: 16px;
+            color: #ffffff;
+            margin-top: 15px;
+        }
 
-        /* this is the top nav go down!*/
+        .green-btn:hover {
+            background: #e8e8e8;
+            color: #f7b733;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+        }
 
+        .square-btn {
+            width: 60px;
+            height: 60px;
+            margin: 0 5px;
+            border: 2px solid #d6d6d6;
+            background: #ffffff;
+            border-radius: 3px;
+        }
 
+        .square-btn:hover {
+            background: #58595b;
+            color: #ffffff;
+        }
 
+        .square-btn:active {
+            background: #58595b;
+            color: #ffffff;
+        }
 
+        a {
+            border: none;
+            color: #f7b733;
+        }
 
+        .author {
+            font-weight: bold;
+            font-family: 'Helvetica', sans-serif;
+            font-size: 12px;
+            padding-right: 10px;
+            border-right: 1px solid #626262;
+        }
 
+        .date {
+            font-weight: normal;
+            font-family: 'Helvetica', sans-serif;
+            font-size: 12px;
+            padding: 0 10px;
+            border-right: 1px solid #626262;
+        }
+
+        .time {
+            font-weight: normal;
+            font-family: 'Helvetica', sans-serif;
+            font-size: 12px;
+            padding: 0 10px;
+        }
+
+        h2 {
+            font-family: 'Helvetica', sans-serif;
+            font-weight:bold;
+            font-size: 27px;
+            line-height: 20px;
+        }
+
+        button {
+            outline: none;
+        }
+        button .square-btn:active {
+            background: #58595b;
+            color: #ffffff;
+        }
     </style>
+    <script>
 
+        $('button').on('click', function(e) {
+            if ($(this).hasClass('list')) {
+                $('#container ul').addClass('list').removeClass('grid');
+            } else if ($(this).hasClass('grid')) {
+                $('#container ul').addClass('grid').removeClass('list');
+            }
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+<div id="container">
+    <div class="buttons">
+        view:
+        <button class="grid square-btn"><i class="fa fa-th-large fa-3x"></i></button>
+        <button class="list square-btn"><i class="fa fa-bars fa-3x"></i></button>
+    </div>
+    <ul class="grid">
+        <li>
+            <h2>Messier 2</h2>
+            <span class="author">Jean</span><span class="date">11/11/15</span><span class="time">7:22pm</span>
+            <p>This is text inside a tile. this is just plain text that does not mean anything. <a href="#">Read More</a></p>
+            
+            <button class="green-btn">READ MORE</button>
+        </li>
+        <li>
+            <h2>Messier 15</h2>
+            <span class="author">Jean</span><span class="date">11/11/15</span><span class="time">7:22pm</span>
+            <p>This is text inside a tile. this is just plain text that does not mean anything. <a href="#">Read More</a></p>
 
-</main>
+            <button class="green-btn">READ MORE</button>
+        </li>
+        <li>
+            <h2>Messier 30</h2>
+            <span class="author">Jean</span><span class="date">11/11/15</span><span class="time">7:22pm</span>
+            <p>This is text inside a tile. this is just plain text that does not mean anything. <a href="#">Read More</a></p>
+
+            <button class="green-btn">READ MORE</button>
+        </li>
+        <li>
+            <h2>Messier 31</h2>
+            <span class="author">Jean</span><span class="date">11/11/15</span><span class="time">7:22pm</span>
+            <p>This is text inside a tile. this is just plain text that does not mean anything. <a href="#">Read More</a></p>
+
+            <button class="green-btn">READ MORE</button>
+        </li>
+        <li>
+            <h2>Messier 32</h2>
+            <span class="author">Jean</span><span class="date">11/11/15</span><span class="time">7:22pm</span>
+            <p>This is text inside a tile. this is just plain text that does not mean anything. <a href="#">Read More</a></p>
+
+            <button class="green-btn">READ MORE</button>
+        </li>
+        <li>
+            <h2>Messier 33</h2>
+            <span class="author">Jean</span><span class="date">11/11/15</span><span class="time">7:22pm</span>
+            <p>This is text inside a tile. this is just plain text that does not mean anything. <a href="#">Read More</a></p>
+
+            <button class="green-btn">READ MORE</button>
+        </li>
+        <li>
+            <h2>Messier 34</h2>
+            <span class="author">Jean</span><span class="date">11/11/15</span><span class="time">7:22pm</span>
+            <p>This is text inside a tile. this is just plain text that does not mean anything. <a href="#">Read More</a></p>
+
+            <button class="green-btn">READ MORE</button>
+        </li>
+        <li>
+            <h2>Messier 52</h2>
+            <span class="author">Jean</span><span class="date">11/11/15</span><span class="time">7:22pm</span>
+            <p>This is text inside a tile. this is just plain text that does not mean anything. <a href="#">Read More</a></p>
+
+            <button class="green-btn">READ MORE</button>
+        </li>
+        <li>
+            <h2>Messier 72</h2>
+            <span class="author">Jean</span><span class="date">11/11/15</span><span class="time">7:22pm</span>
+            <p>This is text inside a tile. this is just plain text that does not mean anything. <a href="#">Read More</a></p>
+
+            <button class="green-btn">READ MORE</button>
+        </li>
+        <li>
+            <h2>Messier 73</h2>
+            <span class="author">Jean</span><span class="date">11/11/15</span><span class="time">7:22pm</span>
+            <p>This is text inside a tile. this is just plain text that does not mean anything. <a href="#">Read More</a></p>
+
+            <button class="green-btn">READ MORE</button>
+        </li>
+        <li>
+            <h2>Messier 74</h2>
+            <span class="author">Jean</span><span class="date">11/11/15</span><span class="time">7:22pm</span>
+            <p>This is text inside a tile. this is just plain text that does not mean anything. <a href="#">Read More</a></p>
+
+            <button class="green-btn">READ MORE</button>
+        </li>
+        <li>
+            <h2>Messier 76</h2>
+            <span class="author">Jean</span><span class="date">11/11/15</span><span class="time">7:22pm</span>
+            <p>This is text inside a tile. this is just plain text that does not mean anything. <a href="#">Read More</a></p>
+
+            <button class="green-btn">READ MORE</button>
+        </li>
+        <li>
+            <h2>Messier 77</h2>
+            <span class="author">Jean</span><span class="date">11/11/15</span><span class="time">7:22pm</span>
+            <p>This is text inside a tile. this is just plain text that does not mean anything. <a href="#">Read More</a></p>
+
+            <button class="green-btn">READ MORE</button>
+        </li>
+        <li>
+            <h2>Messier 103</h2>
+            <span class="author">Jean</span><span class="date">11/11/15</span><span class="time">7:22pm</span>
+            <p>This is text inside a tile. this is just plain text that does not mean anything. <a href="#">Read More</a></p>
+
+            <button class="green-btn">READ MORE</button>
+        </li>
+        <li>
+            <h2>Messier 110</h2>
+            <span class="author">Jean</span><span class="date">11/11/15</span><span class="time">7:22pm</span>
+            <p>This is text inside a tile. this is just plain text that does not mean anything. <a href="#">Read More</a></p>
+
+            <button class="green-btn">READ MORE</button>
+        </li>
+</div>
+</body>
+</html>
