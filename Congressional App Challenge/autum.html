@@ -6,282 +6,747 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <style>
+        html {
+            box-sizing: border-box;
+            font-size: 62.5%;
+        }
+        *, *:before, *:after {
+            margin: 0;
+            padding: 0;
+            box-sizing: inherit;
+        }
         body {
-            width: 100%;
-            margin: 0 auto;
-            background: #ff9966;
-            color: #626262;
+            padding: 0 1.5rem;
+            font-family: Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: #fe8c00;
+            color: #333;
         }
-
-        #container {
+        img {
+            width: 100%;
+            height: auto;
+        }
+        .wrapper {
+            max-width: 1000px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 auto;
+            padding-top: 4rem;
+            margin-bottom: 10rem;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            grid-gap: 4rem;
+        }
+        .pen-title {
+            display: block;
+            grid-column: 1/-1;
+            font-size: 4rem;
+        }
+        .card {
+            max-width: 500px;
+            width: 100%;
+            height: 250px;
             position: relative;
-            width: 968px;
-            margin: 0 auto;
-            transition: ease-in
+            padding: 3rem 2rem;
+            color: white;
+            justify-self: center;
+            transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
         }
-
-        #container ul {
-            list-style: none;
+        .card:hover {
+            transform: scale(1.02);
         }
-
-        #container .buttons {
-            margin: 10px 0px 0 380px;
+        .card .card-content {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: space-between;
+            justify-content: space-between;
         }
-
-        #container .grid li:hover {
-            box-shadow: 4px 4px 9px rgba(0, 0, 0, 0.4);
-            transition: 0.5s ease;
+        .card .card-content .bottom h2 {
+            font-size: 2.6rem;
         }
-
-        #container .grid li {
-            float: left;
-            width: 200px;
-            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
-            border-top: 8px solid #f7b733;
-            margin: 20px 25px;
-            padding: 0 20px 20px 20px;
-            text-align: left;
+        .card .top {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.8rem;
         }
-
-        #container .list li {
-            float: left;
-            width: 100%;
-            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
-            margin: 2px 15px;
-            padding: 0 20px 15px;
-            text-align: left;
+        .card .top .name {
+            font-size: 1.8rem;
         }
-
-        #container .list li:hover {
-            box-shadow: 4px 0px 9px rgba(0, 0, 0, 0.4);
-            transition: 0.5s ease;
-        }
-
-        #container .list li button {
-            display: none;
-        }
-
-        #container li:nth-child(odd) {
-            background: #ffffff;
-        }
-
-        #container li:first-child {
-            border-top: 8px solid #f7b733;
-        }
-
-        #container li:nth-child(even) {
-            background: #ede5e9;
-        }
-
-        .float-left {
-            float: left;
-            padding-right: 20px;
-        }
-
-        .green-btn {
-            background: #f7b733;
-            border: none;
-            border-radius: 3px;
-            padding: 15px 20px;
-            font-family: 'Helvetica', sans-serif;
-            font-size: 16px;
-            color: #ffffff;
-            margin-top: 15px;
-        }
-
-        .green-btn:hover {
-            background: #e8e8e8;
-            color: #f7b733;
-            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-        }
-
-        .square-btn {
-            width: 60px;
-            height: 60px;
-            margin: 0 5px;
-            border: 2px solid #d6d6d6;
-            background: #ffffff;
-            border-radius: 3px;
-        }
-
-        .square-btn:hover {
-            background: #58595b;
-            color: #ffffff;
-        }
-
-        .square-btn:active {
-            background: #58595b;
-            color: #ffffff;
-        }
-
-        a {
-            border: none;
-            color: #f7b733;
-        }
-
-        .author {
+        .card .top .date {
             font-weight: bold;
-            font-family: 'Helvetica', sans-serif;
-            font-size: 12px;
-            padding-right: 10px;
-            border-right: 1px solid #626262;
+            opacity: 0.8;
+        }
+        .card .bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .card .bottom .bookmark {
+            margin-left: 5rem;
+            border: 2px solid white;
+            padding: 0.7rem;
+            border-radius: 50%;
+        }
+        .card .bottom .bookmark .bookmark-icn {
+            fill: white;
+        }
+        .card .bottom .bookmark:hover {
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        .card .card-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            border-radius: 20px;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .card .card-bg .bg-img {
+            height: 100%;
+            object-fit: cover;
+            vertical-align: middle;
+        }
+        .card .shadow {
+            position: absolute;
+            width: 90%;
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            left: 50%;
+            transform: translate(-50%, 0);
+            bottom: -15px;
+            z-index: -2;
+            border-radius: 20px;
+            filter: blur(15px);
+        }
+        .card .shadow .shadow-img {
+            margin-top: 3rem;
+            object-fit: cover;
         }
 
-        .date {
-            font-weight: normal;
-            font-family: 'Helvetica', sans-serif;
-            font-size: 12px;
-            padding: 0 10px;
-            border-right: 1px solid #626262;
-        }
 
-        .time {
-            font-weight: normal;
-            font-family: 'Helvetica', sans-serif;
-            font-size: 12px;
-            padding: 0 10px;
-        }
-
-        h2 {
-            font-family: 'Helvetica', sans-serif;
-            font-weight:bold;
-            font-size: 27px;
-            line-height: 20px;
-        }
-
-        button {
-            outline: none;
-        }
-        button .square-btn:active {
-            background: #58595b;
-            color: #ffffff;
-        }
     </style>
-    <script>
-
-        $('button').on('click', function(e) {
-            if ($(this).hasClass('list')) {
-                $('#container ul').addClass('list').removeClass('grid');
-            } else if ($(this).hasClass('grid')) {
-                $('#container ul').addClass('grid').removeClass('list');
-            }
-        });
-    </script>
     <title>Document</title>
 </head>
 <body>
-<div id="container">
-    <div class="buttons">
-        view:
-        <button class="grid square-btn"><i class="fa fa-th-large fa-3x"></i></button>
-        <button class="list square-btn"><i class="fa fa-bars fa-3x"></i></button>
+<div class="wrapper">
+    <div class="cards">
+        <h1 class="pen-title">
+            <center>Autumnal Night Sky</center>
+        </h1>
+        <div class="card">
+            <div class="card-content">
+                <div class="top">
+                    <h3 class="name"></h3>
+                    <div class="date"><span></span></div>
+                </div>
+                <div class="bottom">
+                    <h2>Messier 2</h2>
+                    <div class="bookmark">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                class="bookmark-icn"
+                        >
+                            <path
+                                    d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
+                            ></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="card-bg">
+                <img
+                        class="bg-img"
+                        src="http://astropixels.com/globularclusters/images/M2-01w.jpg"
+                        alt="leafs"
+                />
+            </div>
+            <div class="shadow">
+                <img
+                        class="shadow-img"
+                        src="http://astropixels.com/globularclusters/images/M2-01w.jpg"
+                        alt="leafs"
+                />
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <div class="top">
+                    <h3 class="name"></h3>
+
+                </div>
+                <div class="bottom">
+                    <h2>Messier 15</h2>
+                    <div class="bookmark">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                class="bookmark-icn"
+                        >
+                            <path
+                                    d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
+                            ></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="card-bg">
+                <img
+                        class="bg-img"
+                        src="http://astropixels.com/globularclusters/images/M15-01w.jpg"
+                        alt="colorful smoke"
+                />
+            </div>
+            <div class="shadow">
+                <img
+                        class="shadow-img"
+                        src="http://astropixels.com/globularclusters/images/M15-01w.jpg"
+                        alt="colorful smoke"
+                />
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-content">
+                <div class="top">
+                    <h3 class="name"></h3>
+
+                </div>
+                <div class="bottom">
+                    <h2>Messier 30</h2>
+                    <div class="bookmark">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                class="bookmark-icn"
+                        >
+                            <path
+                                    d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
+                            ></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="card-bg">
+                <img
+                        class="bg-img"
+                        src="http://astropixels.com/globularclusters/images/M30-01w.jpg"
+                        alt="red colour"
+                />
+            </div>
+            <div class="shadow">
+                <img
+                        class="shadow-img"
+                        src="http://astropixels.com/globularclusters/images/M30-01w.jpg"
+                        alt="red colour"
+                />
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="top">
+
+
+                </div>
+                <div class="bottom">
+                    <h2>Messier 31</h2>
+                    <div class="bookmark">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                class="bookmark-icn"
+                        >
+                            <path
+                                    d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
+                            ></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="card-bg">
+                <img
+                        class="bg-img"
+                        src="http://astropixels.com/galaxies/images/M31-01w.jpg"
+                        alt="wave"
+                />
+            </div>
+            <div class="shadow">
+                <img
+                        class="shadow-img"
+                        src="http://astropixels.com/galaxies/images/M31-01w.jpg"
+                        alt="wave"
+                />
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="top">
+
+
+                </div>
+                <div class="bottom">
+                    <h2>Messier 32</h2>
+                    <div class="bookmark">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                class="bookmark-icn"
+                        >
+                            <path
+                                    d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
+                            ></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="card-bg">
+                <img
+                        class="bg-img"
+                        src="http://astropixels.com/galaxies/images/M31-01w.jpg"
+                        alt="wave"
+                />
+            </div>
+            <div class="shadow">
+                <img
+                        class="shadow-img"
+                        src="http://astropixels.com/galaxies/images/M31-01w.jpg"
+                        alt="wave"
+                />
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="top">
+
+
+                </div>
+                <div class="bottom">
+                    <h2>Messier 33</h2>
+                    <div class="bookmark">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                class="bookmark-icn"
+                        >
+                            <path
+                                    d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
+                            ></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="card-bg">
+                <img
+                        class="bg-img"
+                        src="http://astropixels.com/galaxies/images/M33-01w.jpg"
+                        alt="wave"
+                />
+            </div>
+            <div class="shadow">
+                <img
+                        class="shadow-img"
+                        src=http://astropixels.com/galaxies/images/M33-01w.jpg"
+                        alt="wave"
+                />
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="top">
+
+
+                </div>
+                <div class="bottom">
+                    <h2>Messier 34</h2>
+                    <div class="bookmark">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                class="bookmark-icn"
+                        >
+                            <path
+                                    d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
+                            ></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="card-bg">
+                <img
+                        class="bg-img"
+                        src="http://astropixels.com/openclusters/images/M34-01w.jpg"
+                        alt="wave"
+                />
+            </div>
+            <div class="shadow">
+                <img
+                        class="shadow-img"
+                        src="http://astropixels.com/openclusters/images/M34-01w.jpg"
+                        alt="wave"
+                />
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="top">
+
+
+                </div>
+                <div class="bottom">
+                    <h2>Messier 52</h2>
+                    <div class="bookmark">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                class="bookmark-icn"
+                        >
+                            <path
+                                    d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
+                            ></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="card-bg">
+                <img
+                        class="bg-img"
+                        src="http://astropixels.com/openclusters/images/M52-01w.jpg"
+                        alt="wave"
+                />
+            </div>
+            <div class="shadow">
+                <img
+                        class="shadow-img"
+                        src="http://astropixels.com/openclusters/images/M52-01w.jpg"
+                        alt="wave"
+                />
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="top">
+
+
+                </div>
+                <div class="bottom">
+                    <h2>Messier 72</h2>
+                    <div class="bookmark">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                class="bookmark-icn"
+                        >
+                            <path
+                                    d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
+                            ></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="card-bg">
+                <img
+                        class="bg-img"
+                        src="http://astropixels.com/globularclusters/images/M72-01w.jpg"
+                        alt="wave"
+                />
+            </div>
+            <div class="shadow">
+                <img
+                        class="shadow-img"
+                        src="http://astropixels.com/globularclusters/images/M72-01w.jpg"
+                        alt="wave"
+                />
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="top">
+
+
+                </div>
+                <div class="bottom">
+                    <h2>Messier 73</h2>
+                    <div class="bookmark">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                class="bookmark-icn"
+                        >
+                            <path
+                                    d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
+                            ></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="card-bg">
+                <img
+                        class="bg-img"
+                        src="http://astropixels.com/stars/images/M73-01w.jpg"
+                        alt="wave"
+                />
+            </div>
+            <div class="shadow">
+                <img
+                        class="shadow-img"
+                        src="http://astropixels.com/stars/images/M73-01w.jpg"
+                        alt="wave"
+                />
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="top">
+
+
+                </div>
+                <div class="bottom">
+                    <h2>Messier 74</h2>
+                    <div class="bookmark">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                class="bookmark-icn"
+                        >
+                            <path
+                                    d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
+                            ></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="card-bg">
+                <img
+                        class="bg-img"
+                        src="http://astropixels.com/galaxies/images/M74-01w.jpg"
+                        alt="wave"
+                />
+            </div>
+            <div class="shadow">
+                <img
+                        class="shadow-img"
+                        src="http://astropixels.com/galaxies/images/M74-01w.jpg"
+                        alt="wave"
+                />
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="top">
+
+
+                </div>
+                <div class="bottom">
+                    <h2>Messier 76</h2>
+                    <div class="bookmark">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                class="bookmark-icn"
+                        >
+                            <path
+                                    d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
+                            ></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="card-bg">
+                <img
+                        class="bg-img"
+                        src="http://astropixels.com/planetarynebulae/images/M76-01w.jpg"
+                        alt="wave"
+                />
+            </div>
+            <div class="shadow">
+                <img
+                        class="shadow-img"
+                        src="http://astropixels.com/planetarynebulae/images/M76-01w.jpg"
+                        alt="wave"
+                />
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="top">
+
+                </div>
+                <div class="bottom">
+                    <h2>Messier 77</h2>
+                    <div class="bookmark">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                class="bookmark-icn"
+                        >
+                            <path
+                                    d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
+                            ></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="card-bg">
+                <img
+                        class="bg-img"
+                        src="http://astropixels.com/galaxies/images/M77-01w.jpg"
+                        alt="wave"
+                />
+            </div>
+            <div class="shadow">
+                <img
+                        class="shadow-img"
+                        src="http://astropixels.com/galaxies/images/M77-01w.jpg"
+                        alt="wave"
+                />
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="top">
+
+
+                </div>
+                <div class="bottom">
+                    <h2>Messier 103</h2>
+                    <div class="bookmark">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                class="bookmark-icn"
+                        >
+                            <path
+                                    d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
+                            ></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="card-bg">
+                <img
+                        class="bg-img"
+                        src="http://astropixels.com/openclusters/images/M103-01w.jpg"
+                        alt="wave"
+                />
+            </div>
+            <div class="shadow">
+                <img
+                        class="shadow-img"
+                        src="http://astropixels.com/openclusters/images/M103-01w.jpg"
+                        alt="wave"
+                />
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="top">
+
+
+                </div>
+                <div class="bottom">
+                    <h2>Messier 110</h2>
+                    <div class="bookmark">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                class="bookmark-icn"
+                        >
+                            <path
+                                    d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
+                            ></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="card-bg">
+                <img
+                        class="bg-img"
+                        src="http://astropixels.com/galaxies/images/M31-01w.jpg"
+                        alt="wave"
+                />
+            </div>
+            <div class="shadow">
+                <img
+                        class="shadow-img"
+                        src="http://astropixels.com/galaxies/images/M31-01w.jpg"
+                        alt="wave"
+                />
+            </div>
+        </div>
+
+        </div>
     </div>
-    <ul class="grid">
-        <li>
-            <h2>Messier 2</h2>
-
-            <p>This is text inside a tile. this is just plain text that does not mean anything. </p>
-
-            <button class="green-btn">READ MORE</button>
-        </li>
-        <li>
-            <h2>Messier 15</h2>
-
-            <p>This is text inside a tile. this is just plain text that does not mean anything. </p>
-
-            <button class="green-btn">READ MORE</button>
-        </li>
-        <li>
-            <h2>Messier 30</h2>
-
-            <p>This is text inside a tile. this is just plain text that does not mean anything. </p>
-
-            <button class="green-btn">READ MORE</button>
-        </li>
-        <li>
-            <h2>Messier 31</h2>
-            
-            <p>This is text inside a tile. this is just plain text that does not mean anything. </p>
-
-            <button class="green-btn">READ MORE</button>
-        </li>
-        <li>
-            <h2>Messier 32</h2>
-
-            <p>This is text inside a tile. this is just plain text that does not mean anything. </p>
-
-            <button class="green-btn">READ MORE</button>
-        </li>
-        <li>
-            <h2>Messier 33</h2>
-
-            <p>This is text inside a tile. this is just plain text that does not mean anything. <a href="#">Read More</a></p>
-
-            <button class="green-btn">READ MORE</button>
-        </li>
-        <li>
-            <h2>Messier 34</h2>
-
-            <p>This is text inside a tile. this is just plain text that does not mean anything. <a href="#">Read More</a></p>
-
-            <button class="green-btn">READ MORE</button>
-        </li>
-        <li>
-            <h2>Messier 52</h2>
-
-            <p>This is text inside a tile. this is just plain text that does not mean anything. <a href="#">Read More</a></p>
-
-            <button class="green-btn">READ MORE</button>
-        </li>
-        <li>
-            <h2>Messier 72</h2>
-
-            <p>This is text inside a tile. this is just plain text that does not mean anything</p>
-
-            <button class="green-btn">READ MORE</button>
-        </li>
-        <li>
-            <h2>Messier 73</h2>
-
-            <p>This is text inside a tile. this is just plain text that does not mean anything. </p>
-
-            <button class="green-btn">READ MORE</button>
-        </li>
-        <li>
-            <h2>Messier 74</h2>
-
-            <p>This is text inside a tile. this is just plain text that does not mean anything.</p>
-
-            <button class="green-btn">READ MORE</button>
-        </li>
-        <li>
-            <h2>Messier 76</h2>
-
-            <p>This is text inside a tile. this is just plain text that does not mean anything. </p>
-
-            <button class="green-btn">READ MORE</button>
-        </li>
-        <li>
-            <h2>Messier 77</h2>
-
-            <p>This is text inside a tile. this is just plain text that does not mean anything. </p>
-
-            <button class="green-btn">READ MORE</button>
-        </li>
-        <li>
-            <h2>Messier 103</h2>
-
-            <p>This is text inside a tile. this is just plain text that does not mean anything. </p>
-
-            <button class="green-btn">READ MORE</button>
-        </li>
-        <li>
-            <h2>Messier 110</h2>
-
-            <p>This is text inside a tile. this is just plain text that does not mean anything. </p>
-
-            <button class="green-btn">READ MORE</button>
-        </li>
 </div>
 </body>
 </html>
