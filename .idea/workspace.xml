@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="61d7af94-6ef4-4bbc-b8bc-0d063b2c9083" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/autum.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/autum.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +22,19 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="3ae55c0f-dab9-4a53-b2b0-ee77a8e0d92a" />
+        <option name="url" value="https://github.com/ibrahimshahid1/Congressional-App-Challenge.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Congressional App Challenge/resources/Autum Side NAV/77.html" root0="SKIP_INSPECTION" />
@@ -101,6 +114,8 @@
       <workItem from="1677430284950" duration="1467000" />
       <workItem from="1677969396358" duration="762000" />
       <workItem from="1678039104770" duration="9185000" />
+      <workItem from="1678493263978" duration="2668000" />
+      <workItem from="1678558695991" duration="390000" />
     </task>
     <servers />
   </component>
