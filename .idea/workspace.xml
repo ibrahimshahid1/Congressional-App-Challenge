@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="61d7af94-6ef4-4bbc-b8bc-0d063b2c9083" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/autum.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/autum.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/resources/javascript/autumnal.js" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/javascript/autumnal.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,6 +137,10 @@
       <workItem from="1706813840170" duration="510000" />
       <workItem from="1706901283921" duration="600000" />
       <workItem from="1707009118785" duration="1000" />
+      <workItem from="1707142215007" duration="634000" />
+      <workItem from="1707143739524" duration="1114000" />
+      <workItem from="1707145334952" duration="2093000" />
+      <workItem from="1707151227067" duration="1734000" />
     </task>
     <servers />
   </component>

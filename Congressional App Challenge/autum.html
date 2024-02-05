@@ -1,158 +1,769 @@
-
-<a id="nav-expand" href="#">
-    <span class="icon icon-menu"></span>&nbsp;
-    View Messier Menu
-
-</a>
-<nav>
-    <a id="nav-collapse" href="#">
-        <span class="icon icon-cross"></span>
-    </a>
-
-    <a href="#">Autumnal Sky Map</a>
-    <a href="/Congressional App Challenge/resources/Autum Side NAV/74.html">M74</a>
-    <a href="/Congressional App Challenge/resources/Autum Side NAV/77.html">M77</a>
-    <a href="/Congressional App Challenge/resources/Autum Side NAV/33.html">M33</a>
-    <a href="/Congressional App Challenge/resources/Autum Side NAV/31.html">M31</a>
-    <a href="/Congressional App Challenge/resources/Autum Side NAV/32.html">M32</a>
-    <a href="/Congressional App Challenge/resources/Autum Side NAV/110.html">M110</a>
-    <a href="/Congressional App Challenge/resources/Autum Side NAV/52.html">M52</a>
-    <a href="/Congressional App Challenge/resources/Autum Side NAV/103.html">M103</a>
-    <a href="/Congressional App Challenge/resources/Autum Side NAV/76.html">M76</a>
-    <a href="/Congressional App Challenge/resources/Autum Side NAV/34.html">M34</a>
-    <a href="/Congressional App Challenge/resources/Autum Side NAV/15.html">M15</a>
-    <a href="/Congressional App Challenge/resources/Autum Side NAV/72.html">M72</a>
-    <a href="/Congressional App Challenge/resources/Autum Side NAV/73.html">M73</a>
-    <a href="/Congressional App Challenge/resources/Autum Side NAV/2.html">M2</a>
-    <a href="/Congressional App Challenge/resources/Autum Side NAV/30.html">M30</a>
-
-
-</nav>
-<main>
-
-
-
-    <center><h1> Autumnal Night Sky Messier Targets</h1></center>
-    <div>
-        <div>
-            <center><h5> Pick a Celestial Target out of the Menu to get  Starmaps and Obserivng tips for each respective object</h5></center>
-
-
-        </div>
-    </div>
-
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <style>
+        html {
+            box-sizing: border-box;
+            font-size: 62.5%;
+        }
+
+        *,
+        *:before,
+        *:after {
+            margin: 0;
+            padding: 0;
+            box-sizing: inherit;
+        }
+
         body {
-            font-family: "Roboto", sans-serif;
-            font-size: 18px;
-            overflow-x: hidden;
-            background-color: #fe8c00;
-            overflow: hidden
-
+            padding: 0 1.5rem;
+            font-family: Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            background-color: #F16529;
+            color: #333;
         }
 
-        main {
-            padding: 40px 25px;
-            transition: .5s ease-in-out;
+        img {
             width: 100%;
-            color: #eee;
-            line-height:  12cm;
-            overflow: hidden
-
+            height: auto;
         }
 
-        nav {
-            background: #000000;
-            bottom: 0;
-            box-shadow: 0 0 5px #666;
-            height: 100%;
-            left: -17.5rem;
-            padding-top: 38px;
-            position: absolute;
-            top: 0;
-            transition: .5s ease-in-out;
-            width: 13rem;
-            user-select: none;
+        .wrapper {
+            max-width: 1000px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 auto;
+            padding-top: 4rem;
+            margin-bottom: 10rem;
         }
 
-        nav a {
-            color: #eee;
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            grid-gap: 4rem;
+        }
+
+        .pen-title {
             display: block;
-            padding: 12px 16px;
-            transition: .5s;
-            text-decoration: none;
-            -webkit-user-drag: none;
+            grid-column: 1/-1;
+            font-size:4rem;
         }
 
-        nav a:hover {
-            background-color: #000000;
+        .card {
+            max-width: 500px;
+            width: 100%;
+            height: 250px;
+            position: relative;
+            padding: 3rem 2rem;
+            color: white;
+            justify-self: center;
+            transition: all 0.3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+            &:hover {
+                transform: scale(1.02);
+            }
+            .card-content {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: space-between;
+                justify-content: space-between;
+                .bottom h2 {
+                    font-size: 2.6rem;
+                }
+            }
+
+            .top {
+                display: flex;
+                justify-content: space-between;
+                font-size: 1.8rem;
+                .name {
+                    font-size: 1.8rem;
+                }
+                .date {
+                    font-weight: bold;
+                    opacity: 0.8;
+                }
+            }
+
+            .bottom {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .bookmark {
+                    margin-left: 5rem;
+                    border: 2px solid white;
+                    padding: 0.7rem;
+                    border-radius: 50%;
+                    .bookmark-icn {
+                        fill: white;
+                    }
+                    &:hover {
+                        cursor: pointer;
+                        background-color: rgba($color: #fff, $alpha: 0.5);
+                    }
+                }
+            }
+
+
+
+            .card-bg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                border-radius: 20px;
+                overflow: hidden;
+                z-index: -1;
+                .bg-img {
+                    height: 100%;
+                    object-fit: cover;
+                    vertical-align: middle;
+                }
+            }
+
+            .shadow {
+                position: absolute;
+                width: 90%;
+                height: 100%;
+                overflow: hidden;
+                display: flex;
+                left: 50%;
+                transform: translate(-50%, 0);
+                bottom: -15px;
+                z-index: -2;
+                border-radius: 20px;
+                filter: blur(15px);
+                .shadow-img {
+                    margin-top: 3rem;
+                    object-fit: cover;
+                }
+            }
+            h1{
+                color: white
+            }
         }
-
-        #nav-collapse {
-            padding: 8px 12px;
-            position: absolute;
-            right: 0;
-            top: 0;
-        }
-
-        #nav-expand {
-            background-color: #333;
-            color: #eee;
-            display: block;
-            left: 0;
-            top: 0;
-            padding: 8px 12px;
-            position: absolute;
-            text-decoration: none;
-            transition: .5s linear;
-            user-select: none;
-            -webkit-user-drag: none;
-        }
-
-        #nav-expand:focus {
-            opacity: 0;
-        }
-
-        #nav-expand:focus ~ main {
-            margin-left: 13rem;
-            transition-delay: .25s;
-        }
-
-        #nav-expand:focus ~ nav {
-            left: 0;
-            transition-delay: .25s;
-        }
-
-        #nav-expand:hover {
-            background-color: #000000;
-            color: #fff;
-        }
-
-        .icon {
-            display: inline-block;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 12px;
-            width: 12px;
-        }
-
-        .icon-cross {
-            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAABHNCSVQICAgIfAhkiAAAAPdJREFUGJV1jz9LhWAYxc+9rVZDQ+DcEI0NLU19gxr6Ci3tuvjnA+gggSBt4qzzO90b5FBubkHgEM1CBL5K93Ia8jWv4G88/A7PeQAArusekXwRQpiGYSzQ4/v+Gcn3OI6vMRJf+cdWFXrxs8+bOI5vkCTJLckf/rMtiuJhJJIk67oWAIA0Te8mhR2klGvbtg/UvNlC27ZPSlwquaqqZwA1dmGe56uu676HxPO8U5IfMyuGp+fEt+nTQghzqWnaMYBDdUVKuXYc5yLLsnsAmz5e6Lp+AgCIouiK5FfTNCvLsvanT5dl+Wia5t6wOwiC87GoCMPwUom/I2EVwEqOzwUAAAAASUVORK5CYII=');
-        }
-
-        .icon-menu {
-            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAABHNCSVQICAgIfAhkiAAAAB5JREFUKJFj/P///38GEgATKYoHKWAc9TQRgGRPAwD0IAv+FT8LPwAAAABJRU5ErkJggg==');
-        }
-
-
-        /* this is the top nav go down!*/
-
-
-
-
-
 
     </style>
 
+</head>
+<body>
 
-</main>
+<div class="wrapper">
+    <div class="cards">
+        <h1 class="pen-title">
+            Autumnal <br />
+            Sky
+        </h1>
+        <div class="card" onclick="window.location.href='/Congressional-App-Challenge/Congressional App Challenge/resources/Autum Side NAV/2.html';" style="cursor: pointer;">
+
+        <div class="card-content">
+                <div class="top">
+
+                </div>
+                <div class="bottom">
+                    <h2>Messier 2</h2>
+                    <div class="bookmark">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                class="bookmark-icn"
+                        >
+                            <path
+                                    d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
+                            ></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="card-bg">
+                <img
+                        class="bg-img"
+                        src="https://science.nasa.gov/wp-content/uploads/2023/04/m2-jpg.webp?w=2048&format=webp"
+                        alt="leafs"
+                />
+            </div>
+            <div class="shadow">
+                <img
+                        class="shadow-img"
+                        src="https://science.nasa.gov/wp-content/uploads/2023/04/m2-jpg.webp?w=2048&format=webp"
+                        alt="leafs"
+                />
+            </div>
+        </div>
+
+
+        <div class="card" onclick="window.location.href='/Congressional-App-Challenge/Congressional App Challenge/resources/Autum Side NAV/15.html';" style="cursor: pointer;">
+            <div class="card-content">
+                <div class="top">
+
+                </div>
+                <div class="bottom">
+                    <h2>Messier 15 </h2>
+                    <div class="bookmark">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                class="bookmark-icn"
+                        >
+                            <path
+                                    d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
+                            ></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="card-bg">
+                <img
+                        class="bg-img"
+                        src="https://science.nasa.gov/wp-content/uploads/2023/04/heic1321a-jpg.webp?w=2048&format=webp"
+                        alt="colorful smoke"
+                />
+            </div>
+            <div class="shadow">
+                <img
+                        class="shadow-img"
+                        src="https://science.nasa.gov/wp-content/uploads/2023/04/heic1321a-jpg.webp?w=2048&format=webp"
+                        alt="colorful smoke"
+                />
+            </div>
+        </div>
+        <div class="card" onclick="window.location.href='/Congressional-App-Challenge/Congressional App Challenge/resources/Autum Side NAV/30.html';" style="cursor: pointer;">
+            <div class="card-content">
+                <div class="top">
+
+                </div>
+                <div class="bottom">
+                    <h2>Messier 30 </h2>
+                    <div class="bookmark">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                class="bookmark-icn"
+                        >
+                            <path
+                                    d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
+                            ></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="card-bg">
+                <img
+                        class="bg-img"
+                        src="https://science.nasa.gov/wp-content/uploads/2023/04/heic0918a-jpg.webp?w=2048&format=webp"
+                        alt="colorful smoke"
+                />
+            </div>
+            <div class="shadow">
+                <img
+                        class="shadow-img"
+                        src="https://science.nasa.gov/wp-content/uploads/2023/04/heic0918a-jpg.webp?w=2048&format=webp"
+                        alt="colorful smoke"
+                />
+            </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='/Congressional-App-Challenge/Congressional App Challenge/resources/Autum Side NAV/31.html';" style="cursor: pointer;">
+            <div class="card-content">
+                <div class="top">
+
+                </div>
+                <div class="bottom">
+                    <h2>Messier 31 </h2>
+                    <div class="bookmark">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                class="bookmark-icn"
+                        >
+                            <path
+                                    d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
+                            ></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="card-bg">
+                <img
+                        class="bg-img"
+                        src="https://www.messier-objects.com/wp-content/uploads/2015/04/Messier-31.jpg"
+                        alt="colorful smoke"
+                />
+            </div>
+            <div class="shadow">
+                <img
+                        class="shadow-img"
+                        src="https://www.messier-objects.com/wp-content/uploads/2015/04/Messier-31.jpg"
+                        alt="colorful smoke"
+                />
+            </div>
+        </div>
+        <div class="card" onclick="window.location.href='/Congressional-App-Challenge/Congressional App Challenge/resources/Autum Side NAV/32.html';" style="cursor: pointer;">
+            <div class="card-content">
+                <div class="top">
+
+                </div>
+                <div class="bottom">
+                    <h2>Messier 32 </h2>
+                    <div class="bookmark">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                class="bookmark-icn"
+                        >
+                            <path
+                                    d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
+                            ></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="card-bg">
+                <img
+                        class="bg-img"
+                        src="https://science.nasa.gov/wp-content/uploads/2023/04/m32_acs_field2_3b_flat_gapfill_final-jpg.webp?w=2048&format=webp"
+                        alt="colorful smoke"
+                />
+            </div>
+            <div class="shadow">
+                <img
+                        class="shadow-img"
+                        src="https://science.nasa.gov/wp-content/uploads/2023/04/m32_acs_field2_3b_flat_gapfill_final-jpg.webp?w=2048&format=webp"
+                        alt="colorful smoke"
+                />
+            </div>
+        </div>
+       <div class="card" onclick="window.location.href='/Congressional-App-Challenge/Congressional App Challenge/resources/Autum Side NAV/33.html';" style="cursor: pointer;">
+            <div class="card-content">
+                <div class="top">
+
+                </div>
+                <div class="bottom">
+                    <h2>Messier 33 </h2>
+                    <div class="bookmark">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                class="bookmark-icn"
+                        >
+                            <path
+                                    d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
+                            ></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="card-bg">
+                <img
+                        class="bg-img"
+                        src="https://science.nasa.gov/wp-content/uploads/2023/04/heic1901a-jpg.webp?w=2048&format=webp"
+                        alt="colorful smoke"
+                />
+            </div>
+            <div class="shadow">
+                <img
+                        class="shadow-img"
+                        src="https://science.nasa.gov/wp-content/uploads/2023/04/heic1901a-jpg.webp?w=2048&format=webp"
+                        alt="colorful smoke"
+                />
+            </div>
+        </div>
+        <div class="card" onclick="window.location.href='/Congressional-App-Challenge/Congressional App Challenge/resources/Autum Side NAV/34.html';" style="cursor: pointer;">
+            <div class="card-content">
+                <div class="top">
+
+                </div>
+                <div class="bottom">
+                    <h2>Messier 34 </h2>
+                    <div class="bookmark">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                class="bookmark-icn"
+                        >
+                            <path
+                                    d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
+                            ></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="card-bg">
+                <img
+                        class="bg-img"
+                        src="https://www.go-astronomy.com/images/messier/big/messier-34.jpg"
+                        alt="colorful smoke"
+                />
+            </div>
+            <div class="shadow">
+                <img
+                        class="shadow-img"
+                        src="hhttps://www.go-astronomy.com/images/messier/big/messier-34.jpg"
+                        alt="colorful smoke"
+                />
+            </div>
+        </div>
+        <div class="card" onclick="window.location.href='/Congressional-App-Challenge/Congressional App Challenge/resources/Autum Side NAV/52.html';" style="cursor: pointer;">
+            <div class="card-content">
+                <div class="top">
+
+                </div>
+                <div class="bottom">
+                    <h2>Messier 52 </h2>
+                    <div class="bookmark">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                class="bookmark-icn"
+                        >
+                            <path
+                                    d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
+                            ></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="card-bg">
+                <img
+                        class="bg-img"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/M52atlas.jpg/450px-M52atlas.jpg"
+                        alt="colorful smoke"
+                />
+            </div>
+            <div class="shadow">
+                <img
+                        class="shadow-img"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/M52atlas.jpg/450px-M52atlas.jpg"
+                        alt="colorful smoke"
+                />
+            </div>
+        </div>
+        <div class="card" onclick="window.location.href='/Congressional-App-Challenge/Congressional App Challenge/resources/Autum Side NAV/72.html';" style="cursor: pointer;">
+            <div class="card-content">
+                <div class="top">
+
+                </div>
+                <div class="bottom">
+                    <h2>Messier 72 </h2>
+                    <div class="bookmark">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                class="bookmark-icn"
+                        >
+                            <path
+                                    d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
+                            ></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="card-bg">
+                <img
+                        class="bg-img"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/M72_Hubble_WikiSky.jpg/450px-M72_Hubble_WikiSky.jpg"
+                        alt="colorful smoke"
+                />
+            </div>
+            <div class="shadow">
+                <img
+                        class="shadow-img"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/M72_Hubble_WikiSky.jpg/450px-M72_Hubble_WikiSky.jpg"
+                        alt="colorful smoke"
+                />
+            </div>
+        </div>
+        <div class="card" onclick="window.location.href='/Congressional-App-Challenge/Congressional App Challenge/resources/Autum Side NAV/73.html';" style="cursor: pointer;">
+            <div class="card-content">
+                <div class="top">
+
+                </div>
+                <div class="bottom">
+                    <h2>Messier 73 </h2>
+                    <div class="bookmark">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                class="bookmark-icn"
+                        >
+                            <path
+                                    d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
+                            ></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="card-bg">
+                <img
+                        class="bg-img"
+                        src="https://science.nasa.gov/wp-content/uploads/2023/04/heic1321a-jpg.webp?w=2048&format=webp"
+                        alt="colorful smoke"
+                />
+            </div>
+            <div class="shadow">
+                <img
+                        class="shadow-img"
+                        src="https://science.nasa.gov/wp-content/uploads/2023/04/heic1321a-jpg.webp?w=2048&format=webp"
+                        alt="colorful smoke"
+                />
+            </div>
+        </div>
+        <div class="card" onclick="window.location.href='/Congressional-App-Challenge/Congressional App Challenge/resources/Autum Side NAV/74.html';" style="cursor: pointer;">
+            <div class="card-content">
+                <div class="top">
+
+                </div>
+                <div class="bottom">
+                    <h2>Messier 74 </h2>
+                    <div class="bookmark">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                class="bookmark-icn"
+                        >
+                            <path
+                                    d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
+                            ></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="card-bg">
+                <img
+                        class="bg-img"
+                        src="https://science.nasa.gov/wp-content/uploads/2023/04/m74-xlarge_web-jpg.webp?w=2048&format=webp"
+                        alt="colorful smoke"
+                />
+            </div>
+            <div class="shadow">
+                <img
+                        class="shadow-img"
+                        src="https://science.nasa.gov/wp-content/uploads/2023/04/m74-xlarge_web-jpg.webp?w=2048&format=webp"
+                        alt="colorful smoke"
+                />
+            </div>
+        </div>
+        <div class="card" onclick="window.location.href='/Congressional-App-Challenge/Congressional App Challenge/resources/Autum Side NAV/76.html';" style="cursor: pointer;">
+            <div class="card-content">
+                <div class="top">
+
+                </div>
+                <div class="bottom">
+                    <h2>Messier 76 </h2>
+                    <div class="bookmark">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                class="bookmark-icn"
+                        >
+                            <path
+                                    d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
+                            ></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="card-bg">
+                <img
+                        class="bg-img"
+                        src="https://www.messier-objects.com/wp-content/uploads/2015/07/Messier-76.jpg"
+                        alt="colorful smoke"
+                />
+            </div>
+            <div class="shadow">
+                <img
+                        class="shadow-img"
+                        src="https://www.messier-objects.com/wp-content/uploads/2015/07/Messier-76.jpg"
+                        alt="colorful smoke"
+                />
+            </div>
+        </div>
+        <div class="card" onclick="window.location.href='/Congressional-App-Challenge/Congressional App Challenge/resources/Autum Side NAV/77.html';" style="cursor: pointer;">
+            <div class="card-content">
+                <div class="top">
+
+                </div>
+                <div class="bottom">
+                    <h2>Messier 77 </h2>
+                    <div class="bookmark">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                class="bookmark-icn"
+                        >
+                            <path
+                                    d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
+                            ></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="card-bg">
+                <img
+                        class="bg-img"
+                        src="https://science.nasa.gov/wp-content/uploads/2023/04/heic1305a-jpg.webp?w=2048&format=webp"
+                        alt="colorful smoke"
+                />
+            </div>
+            <div class="shadow">
+                <img
+                        class="shadow-img"
+                        src="https://science.nasa.gov/wp-content/uploads/2023/04/heic1305a-jpg.webp?w=2048&format=webp"
+                        alt="colorful smoke"
+                />
+            </div>
+        </div>
+
+
+
+
+        <div class="card" onclick="window.location.href='/Congressional-App-Challenge/Congressional App Challenge/resources/Autum Side NAV/103.html';" style="cursor: pointer;">
+            <div class="card-content">
+                <div class="top">
+
+
+                </div>
+                <div class="bottom">
+                    <h2>Messier 103</h2>
+                    <div class="bookmark">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                class="bookmark-icn"
+                        >
+                            <path
+                                    d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
+                            ></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="card-bg">
+                <img
+                        class="bg-img"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/M103_Mazur.jpg/450px-M103_Mazur.jpg"
+                        alt="red colour"
+                />
+            </div>
+            <div class="shadow">
+                <img
+                        class="shadow-img"
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/M103_Mazur.jpg/450px-M103_Mazur.jpg"
+                        alt="red colour"
+                />
+            </div>
+        </div>
+
+        <div class="card" onclick="window.location.href='/Congressional-App-Challenge/Congressional App Challenge/resources/Autum Side NAV/110.html';" style="cursor: pointer;">
+            <div class="card-content">
+                <div class="top">
+
+                </div>
+                <div class="bottom">
+                    <h2>Messier 110</h2>
+                    <div class="bookmark">
+                        <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                x="0px"
+                                y="0px"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                class="bookmark-icn"
+                        >
+                            <path
+                                    d="M 6.0097656 2 C 4.9143111 2 4.0097656 2.9025988 4.0097656 3.9980469 L 4 22 L 12 19 L 20 22 L 20 20.556641 L 20 4 C 20 2.9069372 19.093063 2 18 2 L 6.0097656 2 z M 6.0097656 4 L 18 4 L 18 19.113281 L 12 16.863281 L 6.0019531 19.113281 L 6.0097656 4 z"
+                            ></path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="card-bg">
+                <img
+                        class="bg-img"
+                        src="https://science.nasa.gov/wp-content/uploads/2023/04/m110.png?w=2048&format=webp"
+                        alt="wave"
+                />
+            </div>
+            <div class="shadow">
+                <img
+                        class="shadow-img"
+                        src="https://science.nasa.gov/wp-content/uploads/2023/04/m110.png?w=2048&format=webp"
+                        alt="wave"
+                />
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+
+</body>
+</html>
