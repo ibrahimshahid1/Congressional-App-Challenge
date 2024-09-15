@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="61d7af94-6ef4-4bbc-b8bc-0d063b2c9083" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/autum.html" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/autum.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Congressional App Challenge/resources/javascript/autumnal.js" beforeDir="false" afterPath="$PROJECT_DIR$/Congressional App Challenge/resources/javascript/autumnal.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,23 +52,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ibrah/Documents/GitHub/Congressional-App-Challenge&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Ibrah/Documents/GitHub/Congressional-App-Challenge",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="JavaScript Debug.index.html (1)">
     <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/cygnus_the_stargazer_solution/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
@@ -140,7 +139,19 @@
       <workItem from="1707142215007" duration="634000" />
       <workItem from="1707143739524" duration="1114000" />
       <workItem from="1707145334952" duration="2093000" />
-      <workItem from="1707151227067" duration="1734000" />
+      <workItem from="1707151227067" duration="2555000" />
+      <workItem from="1707242600355" duration="1057000" />
+      <workItem from="1707248199346" duration="305000" />
+      <workItem from="1707483576237" duration="2413000" />
+      <workItem from="1707603875503" duration="347000" />
+      <workItem from="1707684647442" duration="596000" />
+      <workItem from="1708024595725" duration="596000" />
+      <workItem from="1710691226935" duration="1000" />
+      <workItem from="1713103478371" duration="6000" />
+      <workItem from="1713191260211" duration="2000" />
+      <workItem from="1714064413138" duration="438000" />
+      <workItem from="1714320148656" duration="6000" />
+      <workItem from="1718045867332" duration="84000" />
     </task>
     <servers />
   </component>
